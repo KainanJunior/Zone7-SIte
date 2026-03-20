@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zone7 Records</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img id="logoImg" class="logo" src="zone7.png" alt="Zone7 Logo">
+      <div class="brandText">
+        <div id="brandName" class="brandName">Zone7 Records</div>
+        <div class="brandTag">Underground Label • Creative Studio</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="navBtn active" data-tab="home" type="button">Início</button>
+      <button class="navBtn" data-tab="shop" type="button">Loja</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="tab-home" class="tab">
+      <section class="hero" id="hero">
+        <div class="heroBg" id="heroBg"></div>
+        <div class="heroOverlay"></div>
+
+        <div class="heroInner heroGrid">
+          <div class="heroContent">
+            <div class="heroEyebrow">UNDERGROUND LABEL</div>
+
+            <h1 id="heroTitle" class="heroTitle">
+              ZONE7 RECORDS
+            </h1>
+
+            <p id="heroSub" class="heroSub">
+              Trap, drill, design e identidade visual com estética pesada e presença real.
+            </p>
+
+            <div class="hero-cta">
+              <button class="cta primary" type="button" onclick="switchTab('shop')">Explorar Beats</button>
+              <button class="cta secondary" type="button" onclick="window.open('https://wa.me/5511949149998','_blank')">Enviar Demo</button>
+            </div>
+
+            <div class="heroActions">
+              <button class="btn alt" type="button" id="scrollArtists">Ver artistas</button>
+              <button class="btn" type="button" id="goShop">Ir pra loja</button>
+              <button class="btn ghostHeroBtn" type="button" id="scrollMusic">Ouvir músicas</button>
+            </div>
+
+            <div class="heroMiniInfo">
+              <span>Beats</span>
+              <span>Design</span>
+              <span>Identidade</span>
+              <span>Underground</span>
+            </div>
+          </div>
+
+          <div class="heroSideCard">
+            <div class="heroCardGlow"></div>
+            <div class="heroCardContent">
+              <div class="heroCardLabel">ZONE7 DROP</div>
+              <h3>Criação com estética escura, urbana e marcante</h3>
+              <p>
+                Beats, direção visual, capas, identidade e vitrine digital pra artista
+                que quer presença forte desde o primeiro clique.
+              </p>
+
+              <div class="heroTags">
+                <span>Trap</span>
+                <span>Drill</span>
+                <span>Design</span>
+                <span>Creative</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="heroStatsWrap">
+        <div class="heroStats">
+          <div class="heroStat">
+            <strong id="statArtists">0</strong>
+            <span>artistas</span>
+          </div>
+          <div class="heroStat">
+            <strong id="statShop">0</strong>
+            <span>itens na loja</span>
+          </div>
+          <div class="heroStat">
+            <strong id="statSpotify">0</strong>
+            <span>links musicais</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sectionTight">
+        <div class="aboutIntroCard">
+          <div>
+            <div class="sectionKicker">SOBRE A ZONE7</div>
+            <h2 class="sectionTitle">Direção criativa com identidade própria</h2>
+          </div>
+          <div id="aboutText" class="about"></div>
+        </div>
+      </section>
+
+      <section class="section" id="artistsSection">
+        <div class="sectionHead">
+          <div>
+            <div class="sectionKicker">CAST</div>
+            <h2 class="sectionTitle">Artistas</h2>
+          </div>
+        </div>
+        <div id="artistsGrid" class="grid"></div>
+      </section>
+
+      <section class="section" id="spotifySection">
+        <div class="sectionHead">
+          <div>
+            <div class="sectionKicker">SOM</div>
+            <h2 class="sectionTitle">Músicas</h2>
+          </div>
+        </div>
+        <div id="spotifyGrid" class="spotifyGrid"></div>
+      </section>
+    </section>
+
+    <section id="tab-shop" class="tab hidden">
+      <section class="section">
+        <div class="shopHero">
+          <div>
+            <span class="eyebrow">STORE</span>
+            <h2 class="sectionTitle shopHeroTitle">Loja Zone7</h2>
+            <p class="shopIntro">Produtos, serviços e beats em um só lugar.</p>
+          </div>
+          <div class="shopHeroStats">
+            <div class="statCard">
+              <strong id="shopCount">0</strong>
+              <span>itens ativos</span>
+            </div>
+            <div class="statCard">
+              <strong id="shopFeaturedCount">0</strong>
+              <span>destaques</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-banner">
+          <h2>Pronto pra lançar um som de verdade?</h2>
+          <p>Escolha seu beat, serviço ou direção visual e fortaleça sua identidade.</p>
+          <button class="cta primary" type="button" onclick="document.getElementById('shopGrid').scrollIntoView({ behavior: 'smooth' })">
+            Ver itens da loja
+          </button>
+        </div>
+
+        <div class="shopToolbar">
+          <div class="toolbarSearch">
+            <input id="shopSearch" class="input shopSearchInput" type="text" placeholder="Buscar produto, beat, serviço...">
+          </div>
+
+          <div class="toolbarFilters">
+            <select id="shopTypeFilter" class="input compactInput">
+              <option value="all">Todos os tipos</option>
+              <option value="product">Produtos / Serviços</option>
+              <option value="beat">Beats</option>
+            </select>
+
+            <select id="shopCategoryFilter" class="input compactInput">
+              <option value="all">Todas as categorias</option>
+            </select>
+
+            <select id="shopSort" class="input compactInput">
+              <option value="featured">Ordenar: destaque</option>
+              <option value="newest">Ordenar: mais novos</option>
+              <option value="price-asc">Preço: menor</option>
+              <option value="price-desc">Preço: maior</option>
+              <option value="name">Nome: A-Z</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="chipRow">
+          <button class="chipBtn active" type="button" data-quick="all">Todos</button>
+          <button class="chipBtn" type="button" data-quick="featured">Destaques</button>
+          <button class="chipBtn" type="button" data-quick="new">Novos</button>
+          <button class="chipBtn" type="button" data-quick="instock">Em estoque</button>
+          <button class="chipBtn" type="button" data-quick="promo">Promoções</button>
+          <button class="chipBtn" type="button" data-quick="beats">Beats</button>
+        </div>
+
+        <div id="shopEmpty" class="emptyState hidden">
+          Nenhum item encontrado.
+        </div>
+
+        <div id="shopGrid" class="shopGrid"></div>
+      </section>
+    </section>
+  </main>
+
+  <div id="shopModal" class="modal hidden" aria-hidden="true">
+    <div class="modalBackdrop" data-close-modal="true"></div>
+
+    <div class="modalPanel">
+      <button id="modalClose" class="modalClose" type="button" aria-label="Fechar">×</button>
+
+      <div class="modalGrid">
+        <div class="modalGallery">
+          <img id="modalMainImg" class="modalMainImg" src="" alt="">
+          <div id="modalThumbs" class="modalThumbs"></div>
+        </div>
+
+        <div class="modalInfo">
+          <div id="modalBadges" class="modalBadges"></div>
+          <h3 id="modalTitle" class="modalTitle"></h3>
+          <p id="modalDesc" class="modalDesc"></p>
+
+          <div class="priceBlock">
+            <span id="modalOldPrice" class="oldPrice hidden"></span>
+            <span id="modalPrice" class="mainPrice"></span>
+          </div>
+
+          <div id="modalMeta" class="metaGrid"></div>
+
+          <div id="modalAudioWrap" class="modalAudioWrap hidden">
+            <audio id="modalAudio" class="beatPlayer" preload="none"></audio>
+          </div>
+
+          <div class="modalActions">
+            <a id="modalBuy" class="actionLink" target="_blank" rel="noopener">
+              <button class="btn" type="button">Comprar</button>
+            </a>
+
+            <a id="modalWhatsapp" class="actionLink" target="_blank" rel="noopener">
+              <button class="btn alt" type="button">WhatsApp</button>
+            </a>
+
+            <a id="modalInstagram" class="actionLink hidden" target="_blank" rel="noopener">
+              <button class="btn alt" type="button">Instagram</button>
+            </a>
+
+            <button id="modalCopyLink" class="btn alt" type="button">Copiar link</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="adminShell" class="adminShell hidden">
+    <div id="adminPanel" class="adminPanel">
+      <div id="adminDrag" class="adminTop">
+        <div class="adminTitle">Zone7 Admin</div>
+        <div class="adminTopRight">
+          <button id="btnLogout" class="ghostBtn" type="button">Sair</button>
+          <button id="btnCloseAdmin" class="ghostBtn" type="button">Fechar</button>
+        </div>
+      </div>
+
+      <div id="adminLogin" class="adminLogin">
+        <input id="adminPassword" class="input" type="password" placeholder="Senha do Admin">
+        <button id="btnLogin" class="btn" type="button">Entrar</button>
+        <div class="small">Como você achou esse lugar?</div>
+      </div>
+
+      <div id="adminBody" class="adminBody hidden">
+        <div class="adminTabs">
+          <button class="adminTab active" data-atab="settings" type="button">Site</button>
+          <button class="adminTab" data-atab="artists" type="button">Artistas</button>
+          <button class="adminTab" data-atab="shop" type="button">Loja</button>
+        </div>
+
+        <div id="a-settings" class="adminPane">
+          <div class="row2">
+            <div>
+              <label class="label">Brand</label>
+              <input id="setBrand" class="input" placeholder="Zone7 Records">
+            </div>
+            <div>
+              <label class="label">Accent</label>
+              <input id="setAccent" class="input" type="color">
+            </div>
+          </div>
+
+          <div class="row2">
+            <div>
+              <label class="label">Fundo</label>
+              <input id="setBg" class="input" type="color">
+            </div>
+            <div>
+              <label class="label">Logo (upload)</label>
+              <input id="setLogoFile" class="input" type="file" accept="image/*">
+            </div>
+          </div>
+
+          <label class="label">Título (Hero)</label>
+          <input id="setHeroTitle" class="input">
+
+          <label class="label">Sub (Hero)</label>
+          <input id="setHeroSub" class="input">
+
+          <label class="label">Hero background (upload)</label>
+          <input id="setHeroBgFile" class="input" type="file" accept="image/*">
+
+          <label class="label">Sobre (use # para títulos)</label>
+          <textarea id="setAbout" class="textarea" rows="8"></textarea>
+
+          <label class="label">Spotify (1 embed por bloco, separados por linha em branco)</label>
+          <textarea id="setSpotify" class="textarea" rows="6"></textarea>
+
+          <button id="btnSaveSettings" class="btn" type="button">Salvar Site</button>
+        </div>
+
+        <div id="a-artists" class="adminPane hidden">
+          <div class="formCard">
+            <div class="row2">
+              <input id="artTitle" class="input" placeholder="Nome do artista">
+              <input id="artLink" class="input" placeholder="Link do Conhecer">
+            </div>
+            <input id="artDesc" class="input" placeholder="Descrição curta">
+            <input id="artImgFile" class="input" type="file" accept="image/*">
+
+            <div class="row2">
+              <button id="btnAddArtist" class="btn" type="button">Adicionar</button>
+              <button id="btnUpdateArtist" class="btn alt hidden" type="button">Atualizar</button>
+            </div>
+
+            <div class="small">Arraste na lista pra reordenar.</div>
+          </div>
+
+          <div id="artistsList" class="list"></div>
+        </div>
+
+        <div id="a-shop" class="adminPane hidden">
+          <div class="formCard">
+            <label class="label">Tipo</label>
+            <select id="shopType" class="input">
+              <option value="product">Produto / Serviço</option>
+              <option value="beat">Beat</option>
+            </select>
+
+            <div class="row2">
+              <input id="shopTitle" class="input" placeholder="Nome do item">
+              <input id="shopCategory" class="input" placeholder="Categoria (ex: design, merch, lease)">
+            </div>
+
+            <div class="row2">
+              <input id="shopLink" class="input" placeholder="Link de compra / checkout">
+              <input id="shopWhatsapp" class="input" placeholder="WhatsApp (ex: 5511999999999)">
+            </div>
+
+            <div class="row2">
+              <input id="shopInstagram" class="input" placeholder="Instagram URL (opcional)">
+              <input id="shopStock" class="input" type="number" min="0" placeholder="Estoque">
+            </div>
+
+            <div class="row2">
+              <input id="shopPrice" class="input" placeholder="Preço (ex: 89,90)">
+              <input id="shopOldPrice" class="input" placeholder="Preço antigo (ex: 129,90)">
+            </div>
+
+            <div class="row2">
+              <input id="shopBadge" class="input" placeholder="Badge extra (ex: Mais vendido)">
+              <input id="shopSlug" class="input" placeholder="Slug opcional (ex: beat-night-run)">
+            </div>
+
+            <input id="shopDesc" class="input" placeholder="Descrição curta">
+
+            <label class="label">Thumb principal (imagem)</label>
+            <input id="shopImgFile" class="input" type="file" accept="image/*">
+
+            <label class="label">Galeria extra (1 URL por linha — opcional)</label>
+            <textarea id="shopGallery" class="textarea" rows="4" placeholder="https://..."></textarea>
+
+            <div class="toggleGrid">
+              <label class="checkLine"><input id="shopFeatured" type="checkbox"> Destacar item</label>
+              <label class="checkLine"><input id="shopIsNew" type="checkbox"> Marcar como novo</label>
+              <label class="checkLine"><input id="shopBestSeller" type="checkbox"> Marcar como mais vendido</label>
+              <label class="checkLine"><input id="shopActive" type="checkbox" checked> Item ativo</label>
+            </div>
+
+            <div id="beatFields" class="hidden">
+              <label class="label">Arquivo do beat (mp3/wav)</label>
+              <input id="shopAudioFile" class="input" type="file" accept="audio/*">
+
+              <div class="row2">
+                <input id="shopBpm" class="input" placeholder="BPM">
+                <input id="shopKey" class="input" placeholder="Tom / Key">
+              </div>
+
+              <div class="row2">
+                <input id="shopGenre" class="input" placeholder="Gênero">
+                <input id="shopLicense" class="input" placeholder="Licença (lease / exclusive)">
+              </div>
+            </div>
+
+            <div class="row2">
+              <button id="btnAddShop" class="btn" type="button">Adicionar</button>
+              <button id="btnUpdateShop" class="btn alt hidden" type="button">Atualizar</button>
+            </div>
+
+            <div class="small">Arraste na lista pra reordenar.</div>
+          </div>
+
+          <div id="shopList" class="list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footerInner">
+      <div class="footerTop">
+        <div class="footerBrand">
+          <div class="footerLogo">
+            <img id="footerLogo" src="./zone7.png" alt="Zone7">
+          </div>
+          <p class="footerDesc">
+            Trap, drill, design e identidade visual com presença real.
+          </p>
+        </div>
+
+        <div class="footerCols">
+          <div class="footerCol">
+            <h4>Navegação</h4>
+            <button class="footerLink" data-tab="home" type="button">Home</button>
+            <button class="footerLink" data-tab="shop" type="button">Loja</button>
+          </div>
+
+          <div class="footerCol">
+            <h4>Serviços</h4>
+            <span>Beats</span>
+            <span>Design</span>
+            <span>Identidade Visual</span>
+          </div>
+
+          <div class="footerCol">
+            <h4>Contato</h4>
+            <a href="https://wa.me/+5511949149998" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://www.instagram.com/zone7rec" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-cta">
+        <h3>Quer trabalhar com a Zone7?</h3>
+        <p>Mande sua ideia, demo ou projeto e vamos construir algo pesado.</p>
+        <a href="https://wa.me/5511949149998" target="_blank" rel="noopener">
+          <button class="cta primary" type="button">Falar no WhatsApp</button>
+        </a>
+      </div>
+
+      <div class="footerBottom">
+        <span>© 2026 Zone7 Records</span>
+        <span class="footerRight">Todos os direitos reservados</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

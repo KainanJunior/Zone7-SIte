@@ -1,0 +1,41 @@
+{
+  "settings": {
+    "brand": "Zone7 Records",
+    "heroTitle": "ZONE7 RECORDS",
+    "heroSub": "Trap • Drill • Cultura Urbana • Design",
+    "accent": "#1c0033",
+    "bg": "#000000",
+    "heroBg": "/uploads/1771142290982-ChatGPT_Image_15_de_fev._de_2026__04_37_19.jpg",
+    "logo": "/uploads/1771142285059-zone7.png",
+    "about": "#MANIFESTO\n\nA Zone7Records nasceu da rua, da vivência real e da vontade de fazer diferente.\nNão seguimos padrões, não esperamos espaço — nós criamos o nosso.\n\nAcreditamos no underground como cultura, identidade e força.\nAcreditamos em artistas que têm história, visão e coragem de construir o próprio caminho.\nAcreditamos que a música não é só som — é atitude, expressão e transformação.\n\nDa quebrada para o mundo, cada passo é construído com trabalho, respeito e verdade.\nMais do que um selo, somos um movimento.\nMais do que lançar músicas, queremos deixar legado.\n\nZone7 Records — De Poá para o mundo.\n\n#MISSÃO\n\nFortalecer artistas independentes, desenvolver novos talentos e criar oportunidades reais dentro da música e da cultura urbana. A Zone7 Records busca oferecer estrutura, apoio e visibilidade para que artistas possam crescer de forma saudável e sustentável, ao mesmo tempo em que promove ações culturais e sociais que valorizam a comunidade e fortalecem a cena underground.\n\n#VISÃO\n\nLevar o underground para o mundo, expandindo fronteiras, conectando talentos e construindo um legado que represente a verdadeira essência da música independente.\n\n#VALORES\n\nIndependência e autenticidade\n\nRespeito à cultura e à comunidade\n\nUnião e fortalecimento da cena\n\nTrabalho, visão e disciplina\n\nTransformação social através da arte",
+    "spotify": [
+      "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0CQGErdwX4QR8HIKwJOsPQ?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+      "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/5r7Z9Au3s00bz1cJodFP2v?utm_source=generator&theme=0\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+    ]
+  },
+  "artists": [
+    {
+      "id": "oasnj5utzsmlnhi1u2",
+      "img": "/uploads/1771144156869-WhatsApp_Image_2026-02-15_at_02.10.16.jpeg",
+      "title": "7LILJIN",
+      "desc": "7LILJIN é artistae CEO da Zone7Records, vindo da Zona Leste de São Paulo. Seu som mistura trap, plug e drill, trazendo uma identidade marcada por vivências reais, flows intensos e uma estética própria que representa a essência do underground.",
+      "link": "https://www.instagram.com/7liljin"
+    },
+    {
+      "id": "fzvwh9j9u1bmlnhj05o",
+      "img": "/uploads/1771144201352-Arquitetando_um_Sonho______.jpg",
+      "title": "WERNECK",
+      "desc": "WERNECK é artista e CEO da Zone7Records, natural de Poá, na Zona Leste de São Paulo. Sua sonoridade mistura trap, drill e a estética urbana com autenticidade, trazendo letras baseadas em vivências reais, flows marcantes e uma identidade forte.",
+      "link": "https://www.instagram.com/werneckmc"
+    }
+  ],
+  "shop": [
+    {
+      "id": "ys2fxz5aenmlnhpwfn",
+      "img": "/uploads/1771144523113-ChatGPT_Image_15_de_fev._de_2026__05_35_14.png",
+      "title": "Capas Artisticas",
+      "desc": "",
+      "link": "https://api.whatsapp.com/send/?phone=5511949149998&text=Quero+uma+capa+album&type=phone_number&app_absent=0"
+    }
+  ]
+}

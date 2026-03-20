@@ -1,0 +1,84 @@
+{
+  "settings": {
+    "brand": "Zone7 Records",
+    "accent": "#37174f",
+    "bg": "#1a1a1a",
+    "heroTitle": "ZONE7 RECORDS",
+    "heroSub": "Trap • Drill • Cultura Urbana • Design",
+    "about": "#MANIFESTO\nA Zone7 Records nasceu da rua, da vivência real e da vontade de fazer diferente.\nNão seguimos padrões, não esperamos espaço — nós criamos o nosso.\n\nAcreditamos no underground como cultura, identidade e força.\nAcreditamos em artistas que têm história, visão e coragem para construir o próprio caminho.\nAcreditamos que a música não é só som — é atitude, expressão e transformação.\n\nDa quebrada para o mundo, cada passo é construído com trabalho, respeito e verdade.\nMais do que um selo, somos um movimento.\nMais do que lançar músicas, queremos deixar um legado.\n\nZone7 Records — De Poá para o mundo.\n\n#MISSÃO\n\nFortalecer artistas independentes, desenvolver novos talentos e criar oportunidades reais dentro da música e da cultura urbana. A Zone7 Records busca oferecer estrutura, apoio e visibilidade para que artistas cresçam de forma sólida e sustentável, ao mesmo tempo em que promove ações culturais e sociais que valorizam a comunidade e fortalecem a cena underground.\n\n#VISÃO\n\nLevar o underground para o mundo, expandindo fronteiras, conectando talentos e construindo um legado que represente a verdadeira essência da música independente.\n\n#VALORES\n\nIndependência e autenticidade\nSer original, sem seguir padrões impostos.\n\nRespeito à cultura e à comunidade\nValorizar as raízes e fortalecer quem caminha junto.\n\nUnião e fortalecimento da cena\nCrescer em coletivo, abrindo espaço para todos.\n\nTrabalho, visão e disciplina\nEvoluir com foco, consistência e mentalidade forte.\n\nTransformação social através da arte\nUsar a arte como ferramenta de mudança real.",
+    "spotify": [
+      "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0CQGErdwX4QR8HIKwJOsPQ?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+      "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/5r7Z9Au3s00bz1cJodFP2v?utm_source=generator&theme=0\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+    ],
+    "logo": "/uploads/1771142285059-zone7.png",
+    "heroBg": "/uploads/1771142290982-ChatGPT_Image_15_de_fev._de_2026__04_37_19.jpg"
+  },
+  "artists": [
+    {
+      "id": "oasnj5utzsmlnhi1u2",
+      "img": "/uploads/1771144156869-WhatsApp_Image_2026-02-15_at_02.10.16.jpeg",
+      "title": "7LILJIN",
+      "desc": "7LILJIN é artistae CEO da Zone7Records, vindo da Zona Leste de São Paulo. Seu som mistura trap, plug e drill, trazendo uma identidade marcada por vivências reais, flows intensos e uma estética própria que representa a essência do underground.",
+      "link": "https://www.instagram.com/7liljin"
+    },
+    {
+      "id": "fzvwh9j9u1bmlnhj05o",
+      "img": "/uploads/1771144201352-Arquitetando_um_Sonho______.jpg",
+      "title": "WERNECK",
+      "desc": "WERNECK é artista e CEO da Zone7Records, natural de Poá, na Zona Leste de São Paulo. Sua sonoridade mistura trap, drill e a estética urbana com autenticidade, trazendo letras baseadas em vivências reais, flows marcantes e uma identidade forte.",
+      "link": "https://www.instagram.com/werneckmc"
+    },
+    {
+      "id": "azw0vsblseimmzbbi7s",
+      "img": "/uploads/1774036150260-c2m0k748ay.jpeg",
+      "title": "MICHE",
+      "desc": "MICHE é um beatmaker de Moçambique e integrante da Zone7 Records, focado no trap moderno. Cria instrumentais únicos com influência brasileira e internacional, sempre buscando transformar ideias em som. Seus beats variam entre vibes melódicas e emocionais, feitos pra artistas que querem se destacar de verdade.",
+      "link": "https://www.instagram.com/miche_03m"
+    },
+    {
+      "id": "vw196o1gse8mmzckzq1",
+      "img": "/uploads/1774038272468-a0492tj3ze7.jpeg",
+      "title": "JOOC",
+      "desc": "um pouco mais   Jooc é um artista da Zone7 Records, nascido e criado em Pirituba, Zona Oeste de São Paulo. Seu som carrega a essência do trap moderno, com fortes influências internacionais e uma estética urbana marcante.  Cria instrumentais energéticos e acelerados, pensados para artistas com personalidade, atitude e identidade própria.",
+      "link": "https://www.instagram.com/joocboy7"
+    }
+  ],
+  "shop": [
+    {
+      "id": "ys2fxz5aenmlnhpwfn",
+      "img": "/uploads/1771144523113-ChatGPT_Image_15_de_fev._de_2026__05_35_14.png",
+      "title": "Capas Artisticas",
+      "desc": "",
+      "link": "https://api.whatsapp.com/send/?phone=5511949149998&text=Quero+uma+capa+album&type=phone_number&app_absent=0",
+      "kind": "product",
+      "audio": ""
+    },
+    {
+      "id": "8kom6ryp46dmm1mi0bf",
+      "kind": "beat",
+      "img": "/uploads/1771999823774-ChatGPT_Image_25_de_fev._de_2026__03_10_08.png",
+      "audio": "/uploads/1774041789165-1bt3rxffula.wav",
+      "title": "Beat Plug",
+      "desc": "Beat by @Joocboy7",
+      "link": "https://wa.me/+5511949149998?text=Quero Comprar um Beat",
+      "category": "Beat",
+      "whatsapp": "5511949149998",
+      "instagram": "",
+      "stock": 1,
+      "price": "135",
+      "oldPrice": "240",
+      "badge": "",
+      "slug": "beat-plug-c-127bpm-by-joocboy7",
+      "gallery": [],
+      "featured": false,
+      "isNew": false,
+      "bestSeller": false,
+      "active": true,
+      "bpm": "127",
+      "key": "C#",
+      "genre": "PLUG",
+      "license": "Exclusive",
+      "createdAt": 1774033898260
+    }
+  ]
+}

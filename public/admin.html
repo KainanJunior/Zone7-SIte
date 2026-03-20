@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Admin • Zone7 CMS</title>
+
+<style>
+body{
+  background:#0e0e0e;
+  color:white;
+  font-family:Arial;
+  padding:30px;
+}
+
+h2{margin-top:40px}
+
+input,textarea{
+  width:100%;
+  padding:8px;
+  margin:6px 0;
+}
+
+button{
+  background:#ff003c;
+  border:none;
+  padding:10px 20px;
+  color:white;
+  cursor:pointer;
+  margin-top:8px;
+}
+
+#panel{display:none}
+
+.itemPreview{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#181818;
+  padding:6px;
+  margin:6px 0;
+}
+
+.itemPreview img{
+  width:60px;
+  height:60px;
+  object-fit:cover;
+}
+
+.deleteBtn{
+  background:#444;
+  margin-left:auto;
+}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginBox">
+  <h2>Login Admin</h2>
+  <input id="user" placeholder="Usuário">
+  <input id="pass" type="password" placeholder="Senha">
+  <button onclick="login()">Entrar</button>
+</div>
+
+
+<!-- PAINEL -->
+<div id="panel">
+
+<h1>ZONE7 CMS</h1>
+
+<!-- TEXTOS -->
+<h2>Textos</h2>
+<input id="brandInput" placeholder="Marca">
+<input id="heroTitleInput" placeholder="Título Hero">
+<input id="heroSubInput" placeholder="Subtítulo">
+<textarea id="aboutInput" placeholder="Sobre"></textarea>
+
+
+<!-- CORES -->
+<h2>Cores</h2>
+Principal: <input type="color" id="primaryInput">
+Fundo: <input type="color" id="bgInput">
+
+
+<!-- ITENS -->
+<h2>Adicionar Item (imagem + texto)</h2>
+
+<input type="file" id="imgInput">
+<input id="titleInput" placeholder="Título">
+<input id="textInput" placeholder="Descrição">
+<input id="priceInput" placeholder="Preço (opcional)">
+
+<button onclick="addItem()">Adicionar</button>
+
+<div id="preview"></div>
+
+<br>
+<button onclick="save()">💾 Salvar Tudo</button>
+
+</div>
+
+
+
+<script>
+/* ================= LOGIN ================= */
+
+const USER="admin"
+const PASS="zone7"
+
+const loginBox=document.getElementById("loginBox")
+const panel=document.getElementById("panel")
+
+function login(){
+  if(user.value===USER && pass.value===PASS){
+    loginBox.style.display="none"
+    panel.style.display="block"
+    load()
+  }else{
+    alert("Login errado")
+  }
+}
+
+
+/* ================= DADOS ================= */
+
+let items=[]
+
+
+function load(){
+
+  const d=JSON.parse(localStorage.getItem("zone7CMS"))||{}
+
+  brandInput.value=d.brand||""
+  heroTitleInput.value=d.heroTitle||""
+  heroSubInput.value=d.heroSub||""
+  aboutInput.value=d.aboutText||""
+  primaryInput.value=d.primary||"#ff003c"
+  bgInput.value=d.bg||"#0a0a0a"
+
+  items=d.items||[]
+
+  preview.innerHTML=""
+  items.forEach((item,i)=>showPreview(item,i))
+}
+
+
+/* ================= ADD ITEM ================= */
+
+function addItem(){
+
+  const file=imgInput.files[0]
+  if(!file) return alert("Escolha uma imagem")
+
+  const reader=new FileReader()
+
+  reader.onload=()=>{
+
+    const item={
+      img:reader.result,
+      title:titleInput.value,
+      text:textInput.value,
+      price:priceInput.value
+    }
+
+    items.push(item)
+    showPreview(item,items.length-1)
+
+    titleInput.value=""
+    textInput.value=""
+    priceInput.value=""
+  }
+
+  reader.readAsDataURL(file)
+}
+
+
+/* ================= PREVIEW ================= */
+
+function showPreview(item,index){
+
+  const div=document.createElement("div")
+  div.className="itemPreview"
+
+  div.innerHTML=`
+    <img src="${item.img}">
+    <span>${item.title}</span>
+    <button class="deleteBtn" onclick="removeItem(${index})">Excluir</button>
+  `
+
+  preview.appendChild(div)
+}
+
+
+/* ================= REMOVE ================= */
+
+function removeItem(index){
+  items.splice(index,1)
+  load()
+}
+
+
+/* ================= SAVE ================= */
+
+function save(){
+
+  const data={
+    brand:brandInput.value,
+    heroTitle:heroTitleInput.value,
+    heroSub:heroSubInput.value,
+    aboutText:aboutInput.value,
+    primary:primaryInput.value,
+    bg:bgInput.value,
+    items:items
+  }
+
+  localStorage.setItem("zone7CMS",JSON.stringify(data))
+
+  alert("Salvo com sucesso!")
+}
+</script>
+
+</body>
+</html>
