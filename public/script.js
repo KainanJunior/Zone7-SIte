@@ -35,6 +35,14 @@ async function load(){
   render();
 }
 
+/* ===== CTA ===== */
+function switchTab(tab) {
+  if (tab === "shop") {
+    document.querySelector("#shop")?.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+}
 
 /* ===== RENDER ===== */
 
