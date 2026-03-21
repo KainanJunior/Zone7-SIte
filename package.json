@@ -4,9 +4,9 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-  "start": "node server.js",
-  "dev": "node server.js"
-},
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
   "description": "",
   "dependencies": {
     "accepts": "^2.0.0",
@@ -93,5 +93,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KainanJunior/Zone7-SIte.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KainanJunior/Zone7-SIte/issues"
+  },
+  "homepage": "https://github.com/KainanJunior/Zone7-SIte#readme"
 }
