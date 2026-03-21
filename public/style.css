@@ -1386,7 +1386,7 @@ button,input,textarea,select{
 /* ===== FOOTER CTA ===== */
 .footer-cta {
   margin-top: 40px;
-  padding: 26px;
+  padding: 20px;
   border-radius: 20px;
   text-align: center;
   border: 1px solid rgba(255,255,255,.08);
